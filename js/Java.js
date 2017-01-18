@@ -1,15 +1,15 @@
 $(document).ready(function() {
   
   var $slider = $(".slider"),
-      $slideBGs = $(".slide__bg"),
-      diff = 0,
-      curSlide = 0,
-      numOfSlides = $(".slide").length-1,
-      animating = false,
-      animTime = 500,
-      autoSlideTimeout,
-      autoSlideDelay = 6000,
-      $pagination = $(".slider-pagi");
+  $slideBGs = $(".slide__bg"),
+  diff = 0,
+  curSlide = 0,
+  numOfSlides = $(".slide").length-1,
+  animating = false,
+  animTime = 500,
+  autoSlideTimeout,
+  autoSlideDelay = 6000,
+  $pagination = $(".slider-pagi");
   
   function createBullets() {
     for (var i = 0; i < numOfSlides+1; i++) {
@@ -76,7 +76,7 @@ $(document).ready(function() {
     if (animating) return;
     window.clearTimeout(autoSlideTimeout);
     var startX = e.pageX || e.originalEvent.touches[0].pageX,
-        winW = $(window).width();
+    winW = $(window).width();
     diff = 0;
     
     $(document).on("mousemove touchmove", function(e) {
@@ -129,7 +129,7 @@ $(document).ready(function() {
  * @Autor: Creaticode
  * @URL: http://creaticode.com 
  */
-$(function() {
+ $(function() {
   /** -----------------------------------------
    * Modulo del Slider 
    -------------------------------------------*/
@@ -142,16 +142,16 @@ $(function() {
 
     // Interval del Slider
     var SliderInterval,
-      currentSlider = 0,
-      nextSlider = 1,
-      lengthSlider = pb.items.panels.length;
+    currentSlider = 0,
+    nextSlider = 1,
+    lengthSlider = pb.items.panels.length;
 
     // Constructor del Slider
     pb.init = function(settings) {
       this.settings = settings || {duration: 8000};
       var items = this.items,
-        lengthPanels = items.panels.length,
-        output = '';
+      lengthPanels = items.panels.length,
+      output = '';
 
       // Insertamos nuestros botones
       for(var i = 0; i < lengthPanels; i++) {
@@ -184,7 +184,7 @@ $(function() {
     // Funcion para la Animacion
     pb.startSlider = function() {
       var items = pb.items,
-        controls = $('#control-buttons li');
+      controls = $('#control-buttons li');
       // Comprobamos si es el ultimo panel para reiniciar el conteo
       if(nextSlider >= lengthSlider) {
         nextSlider = 0;
@@ -204,7 +204,7 @@ $(function() {
     var changePanel = function(id) {
       clearInterval(SliderInterval);
       var items = pb.items,
-        controls = $('#control-buttons li');
+      controls = $('#control-buttons li');
       // Comprobamos si el ID esta disponible entre los paneles
       if(id >= lengthSlider) {
         id = 0;
@@ -224,8 +224,55 @@ $(function() {
     }
 
     return pb;
-   }());
+  }());
 
    SliderModule.init({duration: 4000});
 
+ });
+
+
+ $('.form').find('input, textarea').on('keyup blur focus', function (e) {
+  
+  var $this = $(this),
+  label = $this.prev('label');
+
+  if (e.type === 'keyup') {
+    if ($this.val() === '') {
+      label.removeClass('active highlight');
+    } else {
+      label.addClass('active highlight');
+    }
+  } else if (e.type === 'blur') {
+    if( $this.val() === '' ) {
+      label.removeClass('active highlight'); 
+    } else {
+      label.removeClass('highlight');   
+    }   
+  } else if (e.type === 'focus') {
+    
+    if( $this.val() === '' ) {
+      label.removeClass('highlight'); 
+    } 
+    else if( $this.val() !== '' ) {
+      label.addClass('highlight');
+    }
+  }
+
 });
+
+ $('.tab a').on('click', function (e) {
+  
+  e.preventDefault();
+  
+  $(this).parent().addClass('active');
+  $(this).parent().siblings().removeClass('active');
+  
+  target = $(this).attr('href');
+
+  $('.tab-content > div').not(target).hide();
+  
+  $(target).fadeIn(600);
+  
+});
+
+
