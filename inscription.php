@@ -33,8 +33,8 @@
 
 								    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 								    	<ul id="page1" class="nav navbar-nav navbar-right" style="padding-top: 15px;">
-								    		<li><button type="button" class="btn btn-primary" style=" width: 126px; height: 44px; margin-left: 10px; margin-right: 10px;">S'inscrire</button></li>
-								    		<li><button type="button" class="btn btn-primary" role="button" data-toggle="modal" data-target="#login-modal" style=" width: 126px; height: 44px; margin-left: 10px; margin-right: 10px;">Connexion</button></li>
+								    		<li><a type="button" class="btn btn-primary" style=" width: 126px; height: 50px; margin-left: 10px; margin-right: 10px;">S'inscrire</a></li>
+								    		<li><a type="button" class="btn btn-primary" role="button" data-toggle="modal" data-target="#login-modal" style=" width: 126px; height: 50px; margin-left: 10px; margin-right: 10px;">Connexion</a></li>
 
 								    	</ul>
 								    </div>

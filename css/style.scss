@@ -71,6 +71,8 @@ $dropDown       : true;
 
   background-color: rgba(255, 255, 255, 0.1);
   border-color: rgba(255, 255, 255, 0.1);
+
+
 }
 
 
@@ -174,7 +176,7 @@ svg {
     }
   }
 }
-.
+
 .slider {
   z-index: 1;
   position: relative;
@@ -400,4 +402,20 @@ svg {
   background-color: #171a21;
   color: white;
   font-size: 15px;
+}
+
+
+
+
+
+
+
+/* DAHBOARD */
+#liens{
+  text-align: center;
+}
+.liens{
+  font-size: 1.4vw;
+  color: rgba(255,255,255,.4);
+  text-align: center;
 }

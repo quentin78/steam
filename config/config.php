@@ -1,7 +1,7 @@
 <?php
 
 $host = "localhost";
-$db_name = "restart-php";
+$db_name = "mydb";
 $user = "root";
 $pass = "root";
 

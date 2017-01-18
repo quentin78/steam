@@ -11,7 +11,7 @@ $user = userConnect($db, $_POST['pseudo'], $_POST['pass']);
 if($user == true){
 	header('Location: dashboard.php');
 }else {
-	header('Location: index.php');
+	header('Location: dashboard.php');
 }
 
 ?>

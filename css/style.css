@@ -433,3 +433,14 @@ svg {
   color: white;
   font-size: 15px;
 }
+
+/* DAHBOARD */
+#liens {
+  text-align: center;
+}
+
+.liens {
+  font-size: 1.4vw;
+  color: rgba(255, 255, 255, 0.4);
+  text-align: center;
+}

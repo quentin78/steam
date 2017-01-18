@@ -16,11 +16,9 @@
 </head>
 
 <body>
-
 	<header>
 		<nav class="navbar navbar-default navbar-static-top animated" style="margin-bottom: 0px; padding-bottom: 15px;">
 			<div class="container">
-
 				<div class="navbar-header" style=" padding-top: 15px; ">
 					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false" style="margin-top: 20px;">
 						<span class="sr-only">Toggle navigation</span>
@@ -30,19 +28,14 @@
 					</button>
 					<img alt="Brand" src="img/logo.png" width="120">
 				</div>
-
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					<ul id="page1" class="nav navbar-nav navbar-right" style="padding-top: 15px;">
-						<li><button src="inscription.php" type="button" class="btn btn-primary" style=" width: 126px; height: 44px; margin-left: 10px; margin-right: 10px;">S'inscrire</button></li>
-						<li><button type="button" class="btn btn-primary" role="button" data-toggle="modal" data-target="#login-modal" style=" width: 126px; height: 44px; margin-left: 10px; margin-right: 10px;">Connexion</button></li>
-
+						<li><a href="inscription.php" type="button" class="btn btn-primary" style=" width: 126px; height: 50px; margin-left: 10px; margin-right: 10px;">S'inscrire</a></li>
+						<li><a type="button" class="btn btn-primary" role="button" data-toggle="modal" data-target="#login-modal" style=" width: 126px; height: 50px; margin-left: 10px; margin-right: 10px;">Connexion</a></li>
 					</ul>
 				</div>
-
 			</div>
-
 		</nav>
-
 	</header>
 
 	<!-- BEGIN # MODAL LOGIN -->
@@ -102,7 +95,7 @@
 					<svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice">
 						<path class="slide__overlay-path" d="M0,0 150,0 500,405 0,405" />
 					</svg>
-					<div class="slide__text" style="bottom: 300px;">
+					<div class="slide__text" style="">
 						<h2 class="slide__text-heading">Battlefield 1</h2>
 						<p class="slide__text-desc">Battlefield 1 vous ramène au temps de la Première Guerre mondiale, où les nouvelles technologies et les conflits mondiaux ont marqué les débuts de la guerre moderne. Participez à chaque bataille, contrôlez des véhicules gigantesques et exécutez des manœuvres qui changeront le cours du combat. Le monde entier est en guerre. Découvrez ce qui se trouve au-delà des tranchées.</p>
 					</div>
@@ -115,7 +108,7 @@
 					<svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice">
 						<path class="slide__overlay-path" d="M0,0 150,0 500,405 0,405" />
 					</svg>
-					<div class="slide__text" style="bottom: 300px;">
+					<div class="slide__text" style="">
 						<h2 class="slide__text-heading">Grand Theft Auto V</h2>
 						<p class="slide__text-desc">Grand Theft Auto V pour PC exploitera pleinement les capacités des PC pour intégrer de nombreuses améliorations : résolution supérieure, graphismes plus détaillés, trafic plus dense, profondeur de champ accrue, IA améliorée, nouveaux animaux, effets climatiques et animations de dégâts avancées pour une expérience de jeu vraiment exceptionnelle.</p>
 					</div>
@@ -128,7 +121,7 @@
 					<svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice">
 						<path class="slide__overlay-path" d="M0,0 150,0 500,405 0,405" />
 					</svg>
-					<div class="slide__text" style="bottom: 300px;">
+					<div class="slide__text" style="">
 						<h2 class="slide__text-heading">Steep</h2>
 						<p class="slide__text-desc">Parcourez un immense monde ouvert inspiré des Alpes et de l’Alaska, où la poudreuse est toujours bonne et la piste infinie. Défiez et domptez les sommets les plus épiques en ski, wingsuit, snowboard ou encore en parapente. Lancez-vous seul ou aux côtés d’autres joueurs. Enregistrez et partagez vos figures les plus éblouissantes. Laissez vos amis suivre vos traces, réalisez des figures incroyables et revivez vos chutes les plus épiques.</p>
 					</div>
@@ -141,7 +134,7 @@
 					<svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice">
 						<path class="slide__overlay-path" d="M0,0 150,0 500,405 0,405" />
 					</svg>
-					<div class="slide__text" style="bottom: 300px;">
+					<div class="slide__text" style="">
 						<h2 class="slide__text-heading">Resident Evil 7</h2>
 						<p class="slide__text-desc">Le danger et l'isolement menacent derrière les murs vétustes d'une ferme abandonnée d'Amérique du Sud. "7" marque le renouveau du jeu de survie et propose une perspective inédite pour le joueur avec la "vue isolée". Portée par le moteur RE, l'horreur atteint de nouveaux sommets de réalisme.</p>
 					</div>
