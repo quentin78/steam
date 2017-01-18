@@ -26,12 +26,81 @@
 				</div>
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					<ul id="page1" class="nav navbar-nav navbar-right" style="padding-top: 15px;">
-						<li><a href="inscription.php" type="button" class="btn btn-primary" style=" width: 126px; height: 50px; margin-left: 10px; margin-right: 10px;">S'inscrire</a></li>
-						<li><a type="button" class="btn btn-primary" role="button" data-toggle="modal" data-target="#login-modal" style=" width: 126px; height: 50px; margin-left: 10px; margin-right: 10px;">Connexion</a></li>
+						<li><p style=" font-size:15px;color: rgba(255,255,255,.6); margin-left: 10px; margin-right: 10px;padding-top: 15px;">Bienvenue Maxime </p>
+					
+						<li><a type="button" class="btn btn-primary" role="button" data-toggle="modal" data-target="#login-modal" style=" width: 126px; height: 50px; margin-left: 10px; margin-right: 10px;">Deconnexion</a></li>
 					</ul>
 				</div>
 			</div>
 		</nav>
-
+<nav role="custom-dropdown">
+    <input type="checkbox" id="button">
+    <label for="button" onclick></label>
+    
+    <ul>
+        <li><a href="#">Jeux</a></li>
+        <li><a href="#">Bibliothèque</a></li>
+        <li><a href="#">Communauté</a></li>
+        <li><a href="#">Messages</a></li>
+        <li><a href="#">Plus</a></li>
+    </ul>
+</nav>
 	</header>
+
+
+
+	<h1>Les jeux du mois</h1>
+	<!-- ==================================== 
+	Contenedor Slider 
+	=======================================-->
+	<section id="slider" class="container1">
+		<ul class="slider-wrapper">
+		<li class="current-slide">
+			<img src="img/bf1.jpg" title="" alt="">
+
+			<div class="caption">
+				<h2 class="slider-title">Battelfield 1 </h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore, placeat est. Alias illo hic quo nobis, aspernatur iste ut voluptate.</p>
+			</div>
+		</li>
+
+		<li>
+			<img src="img/Rust.jpg" title="" alt="">
+
+			<div class="caption">
+				<h2 class="slider-title">Rsut</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo iusto placeat aliquid tempore harum, similique!</p>
+			</div>
+		</li>
+
+		<li>
+			<img src="img/steep.jpg" title="" alt="">
+
+			<div class="caption">
+				<h2 class="slider-title">Steep</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos dicta laudantium voluptatem minima! Dolorum tempore dolores excepturi omnis provident. Commodi quis aperiam maiores, dolore a perferendis!</p>
+			</div>
+		</li>
+
+		<li>
+			<img src="img/gta.jpg" title="" alt="">
+
+			<div class="caption">
+				<h2 class="slider-title">GTA V</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem dolore dignissimos laudantium.</p>
+			</div>
+		</li>
+		</ul>
+		<!-- Sombras -->
+		<div class="slider-shadow"></div>
+		
+		<!-- Controles de Navegacion -->
+		<ul id="control-buttons" class="control-buttons"></ul>
+	</section>
+	
+	
+	<!-- Imagenes Copyright -->
+	<p class="authors">
+		Las imagenes usadas en esta demostracíon no son de mi propiedad. <a href="https://www.flickr.com/photos/flickr/galleries/72157645330786244/">Autores de las Imagenes</a>
+	</p>
 
