@@ -1,30 +1,42 @@
 <?php
-function userConnect(PDO $db, $pseudo, $pass){
-	
-		$sql ="SELECT *
-		FROM users
-		WHERE pseudo = :pseudo 
-		AND pass = :pass";
+function userConnection(PDO $db, $mail, $pass){
+		if(!empty($mail) && !empty($pass)){
+			//Requête SQL
+			$sql = "SELECT * FROM utilisateur WHERE mail = :mail AND pass = :pass LIMIT 1";
 
-	$req = $db->prepare($sql);
-	$req->execute(array(
-	'pseudo' => $pseudo,
-	'pass' => $pass
-	));
+			$req = $db->prepare($sql);
+			$req->execute(array(
+				':mail' => $mail,
+				':pass' => $pass
+			));
 
-	$result = $req->fetch(PDO::FETCH_ASSOC);
+			$result = $req->fetch(PDO::FETCH_ASSOC);
 
-	if($result == true){
-		$_SESSION['id'] = $result['id'];
-		$_SESSION['nom'] = $result['nom'];
-		$_SESSION['pseudo'] = $result['pseudo'];
-		$_SESSION['prenom'] = $result['prenom'];
+			//Si le fetch réussi, alors un résultat a été retourné donc le couple mail / pass est correct
+			if($result == true){
+				
+				//on définit la SESSION
+				$_SESSION['id'] = $result['id'];
+				$_SESSION['username'] = $result['username'];
+				$_SESSION['mail'] = $result['mail'];
+				$_SESSION['created_at'] = $result['created_at'];
+				$_SESSION['image'] = $result['picture'];
 
-		return true;
-	}else {
-		return false;
+				return true;
+			}else{
+				return false;
+			}
+		}else{
+
+			return false;
+		}
 	}
-}
+
+	/*1.3!listMusics
+		return :
+			array of results
+		$db -> 				database object
+	*/
 
 function userRegistration(PDO $db, $pseudo, $nom, $prenom, $mail, $pass ) {
 		

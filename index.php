@@ -2,19 +2,15 @@
 
 <html>
 <head>
-
 	<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
 	<title> Steam V2 </title>
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/animate.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
-
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/java.js"></script>
-
 </head>
-
 <body>
 	<header>
 		<nav class="navbar navbar-default navbar-static-top animated" style="margin-bottom: 0px; padding-bottom: 15px;">
@@ -53,14 +49,14 @@
 				<div id="div-forms">
 
 					<!-- Begin # Login Form -->
-					<form id="login-form" action="connexion.php" method="post" >
+					<form id="login-form" class="form" method="POST" action="connexion.php">
 						<div class="modal-body">
 							<div id="div-login-msg" >
 								<div id="icon-login-msg" class="glyphicon glyphicon-chevron-right" style="margin-bottom: 15px;"></div>
 								<span id="text-login-msg">Se connecter à Steam V2.</span>
 							</div>
-							<input style="margin-bottom: 15px;" id="login_username" class="form-control" type="text" placeholder="Entrez votre identifiant." required name="pseudo">
-							<input id="login_password" class="form-control" type="password" placeholder="Entrez votre mot de passe." required name="pass">
+							<input style="margin-bottom: 15px;" id="login_mail" class="form-control" type="text" name="mail">
+							<input id="login_password" class="form-control" type="password" name="pass" value="Mot de Passe">
 
 						</div>
 						<div class="modal-footer">

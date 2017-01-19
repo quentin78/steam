@@ -44,46 +44,4 @@
 							</nav>
 
 			</header>
-
-<!-- BEGIN # MODAL LOGIN -->
-<div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
-    	<div class="modal-dialog" style="margin-top: 15%;">
-			<div class="modal-content">
-				<div class="modal-header" align="center">
-					<img class="img-circle" id="img_logo" src="img/logo.png">
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-						<span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
-					</button>
-				</div>
-                
-                <!-- Begin # DIV Form -->
-                <div id="div-forms">
-                
-                    <!-- Begin # Login Form -->
-                    <form id="login-form" action="connexion.php" method="post" >
-		                <div class="modal-body">
-				    		<div id="div-login-msg" >
-                                <div id="icon-login-msg" class="glyphicon glyphicon-chevron-right" style="margin-bottom: 15px;"></div>
-                                <span id="text-login-msg">Se connecter à Steam V2.</span>
-                            </div>
-				    		<input style="margin-bottom: 15px;" id="login_username" class="form-control" type="text" placeholder="Entrez votre identifiant." required name="pseudo">
-				    		<input id="login_password" class="form-control" type="password" placeholder="Entrez votre mot de passe." required name="pass">
-
-        		    	</div>
-				        <div class="modal-footer">
-                            <div>
-                                <button type="submit" class="btn btn-primary btn-lg btn-block">Connexion</button>
-                            </div>
-				        </div>
-                    </form>
-
-                    <h5 class="text-center"> Vous n'avez pas de compte ? <a href=""> S'inscrire </a> </h5>
-                    <!-- End # Login Form -->
-                    
-                </div>
-                <!-- End # DIV Form -->
-                
-			</div>
-		</div>
-	</div>
-    <!-- END # MODAL LOGIN -->
+s
