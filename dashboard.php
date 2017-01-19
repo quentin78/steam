@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 
 <html>
@@ -26,9 +30,14 @@
 				</div>
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					<ul id="page1" class="nav navbar-nav navbar-right" style="padding-top: 15px;">
-						<li><p style=" font-size:15px;color: rgba(255,255,255,.6); margin-left: 10px; margin-right: 10px;padding-top: 15px;">Bienvenue Maxime </p>
-					
-						<li><a type="button" class="btn btn-primary" role="button" data-toggle="modal" data-target="#login-modal" style=" width: 126px; height: 50px; margin-left: 10px; margin-right: 10px;">Deconnexion</a></li>
+						<li><p style=" font-size:15px;color: rgba(255,255,255,.6); margin-left: 10px; margin-right: 10px;padding-top: 15px;">Bienvenue <?php echo $_SESSION['pseudo']; ?> </p>
+						
+						<li>
+						<form action="deconnexion.php">
+							<input id="dec" type="submit" value="Déconnexion" class="btn btn-danger" style=" width: 126px; height: 50px; margin-left: 10px; margin-right: 10px;">
+						</form>
+						</li>
+						
 					</ul>
 				</div>
 			</div>
@@ -38,7 +47,7 @@
     <label for="button" onclick></label>
     
     <ul>
-        <li><a href="#">Jeux</a></li>
+        <li><a href="jeux.php">Jeux</a></li>
         <li><a href="#">Bibliothèque</a></li>
         <li><a href="#">Communauté</a></li>
         <li><a href="#">Messages</a></li>
@@ -99,8 +108,3 @@
 	</section>
 	
 	
-	<!-- Imagenes Copyright -->
-	<p class="authors">
-		Las imagenes usadas en esta demostracíon no son de mi propiedad. <a href="https://www.flickr.com/photos/flickr/galleries/72157645330786244/">Autores de las Imagenes</a>
-	</p>
-
