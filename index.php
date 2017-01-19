@@ -26,7 +26,7 @@
 				</div>
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					<ul id="page1" class="nav navbar-nav navbar-right" style="padding-top: 15px;">
-						<li><a href="inscription.php" type="button" class="btn btn-primary" style=" width: 126px; height: 50px; margin-left: 10px; margin-right: 10px;">S'inscrire</a></li>
+						<li><a type="button" class="btn btn-primary" role="button" data-toggle="modal" data-target="#register-modal" style=" width: 126px; height: 50px; margin-left: 10px; margin-right: 10px;">S'inscrire</a></li>
 						<li><a type="button" class="btn btn-primary" role="button" data-toggle="modal" data-target="#login-modal" style=" width: 126px; height: 50px; margin-left: 10px; margin-right: 10px;">Connexion</a></li>
 					</ul>
 				</div>
@@ -49,14 +49,14 @@
 				<div id="div-forms">
 
 					<!-- Begin # Login Form -->
-					<form id="login-form" class="form" method="POST" action="connexion.php">
+					<form id="login-form" action="connexion.php" method="post" >
 						<div class="modal-body">
 							<div id="div-login-msg" >
 								<div id="icon-login-msg" class="glyphicon glyphicon-chevron-right" style="margin-bottom: 15px;"></div>
 								<span id="text-login-msg">Se connecter à Steam V2.</span>
 							</div>
-							<input style="margin-bottom: 15px;" id="login_mail" class="form-control" type="text" name="mail">
-							<input id="login_password" class="form-control" type="password" name="pass" value="Mot de Passe">
+							<input style="margin-bottom: 15px;" id="login_username" class="form-control" type="text" placeholder="Entrez votre identifiant." required name="pseudo">
+							<input id="login_password" class="form-control" type="password" placeholder="Entrez votre mot de passe." required name="pass">
 
 						</div>
 						<div class="modal-footer">
@@ -66,7 +66,7 @@
 						</div>
 					</form>
 
-					<h5 class="text-center"> Vous n'avez pas de compte ? <a href=""> S'inscrire </a> </h5>
+					<h5 class="text-center"> Vous n'avez pas de compte ? <a data-dismiss="modal" aria-label="Close" data-toggle="modal" data-target="#register-modal"> S'inscrire </a> </h5>
 					<!-- End # Login Form -->
 
 				</div>
@@ -76,6 +76,57 @@
 		</div>
 	</div>
 	<!-- END # MODAL LOGIN -->
+
+	<!-- BEGIN # MODAL REGISTER -->
+	<div class="modal fade" id="register-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+		<div class="modal-dialog" style="margin-top: 15%;">
+			<div class="modal-content">
+				<div class="modal-header" align="center">
+					<img class="img-circle" id="img_logo" src="img/logo.png">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+					</button>
+				</div>
+
+				<!-- Begin # DIV Form -->
+				<div id="div-forms">
+
+					<!-- Begin # Login Form -->
+					<form id="login-form" action="inscription_confirm.php" method="post" >
+						<div class="modal-body">
+							<div id="div-login-msg" >
+								<div id="icon-login-msg" class="glyphicon glyphicon-chevron-right" style="margin-bottom: 15px;"></div>
+								<span id="text-login-msg">S'inscire sur Steam V2.</span>
+							</div>
+							<input style="margin-bottom: 15px;" id="login_username" class="form-control" type="text" placeholder="Entrez votre nom." required name="nom">
+							<input style="margin-bottom: 15px;" id="login_password" class="form-control" type="text" placeholder="Entrez votre prénom." required name="prenom">
+							<input style="margin-bottom: 15px;" id="login_password" class="form-control" type="date" placeholder="Entrez votre date de naissance." required name="naissance">
+							<input style="margin-bottom: 15px;" id="login_password" class="form-control" type="text" placeholder="Entrez votre adresse." required name="adresse">
+							<input style="margin-bottom: 15px;" id="login_password" class="form-control" type="text" placeholder="Entrez votre ville." required name="ville">
+							<input style="margin-bottom: 15px;" id="login_password" class="form-control" type="number" placeholder="Entrez votre numero de telephone." required name="telephone">
+								<div id="icon-login-msg" class="glyphicon glyphicon-chevron-right" style="margin-bottom: 15px;"></div>
+								<span id="text-login-msg">Pour finir, choissisez vos identifiant de connexion.</span>
+							<input style="margin-bottom: 15px;" id="login_password" class="form-control" type="email" placeholder="Entrez votre adresse email." required name="mail">
+							<input style="margin-bottom: 15px;" id="login_password" class="form-control" type="text" placeholder="Choisissez un pseudo." required name="pseudo">
+							<input style="margin-bottom: 15px;" id="login_password" class="form-control" type="password" placeholder="Choisissez un mot de passe." required name="pass">
+
+						</div>
+						<div class="modal-footer">
+							<div>
+								<button type="submit" class="btn btn-primary btn-lg btn-block">S'inscire</button>
+							</div>
+						</div>
+					</form>
+
+					<!-- End # Login Form -->
+
+				</div>
+				<!-- End # DIV Form -->
+
+			</div>
+		</div>
+	</div>
+	<!-- END # MODAL REGISTER -->
 
 
 	<div class="slider-container">

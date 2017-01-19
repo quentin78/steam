@@ -1,7 +1,7 @@
 <?php
 
 $host = "localhost";
-$db_name = "mydb";
+$db_name = "steam";
 $user = "root";
 $pass = "root";
 

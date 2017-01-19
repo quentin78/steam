@@ -1,56 +1,49 @@
 <?php
-function userConnection(PDO $db, $mail, $pass){
-		if(!empty($mail) && !empty($pass)){
-			//Requête SQL
-			$sql = "SELECT * FROM utilisateur WHERE mail = :mail AND pass = :pass LIMIT 1";
+function userConnect(PDO $db, $pseudo, $pass){
+	
+		$sql ="SELECT *
+		FROM users
+		WHERE pseudo = :pseudo 
+		AND pass = :pass";
 
-			$req = $db->prepare($sql);
-			$req->execute(array(
-				':mail' => $mail,
-				':pass' => $pass
-			));
+	$req = $db->prepare($sql);
+	$req->execute(array(
+	'pseudo' => $pseudo,
+	'pass' => $pass
+	));
 
-			$result = $req->fetch(PDO::FETCH_ASSOC);
+	$result = $req->fetch(PDO::FETCH_ASSOC);
 
-			//Si le fetch réussi, alors un résultat a été retourné donc le couple mail / pass est correct
-			if($result == true){
-				
-				//on définit la SESSION
-				$_SESSION['id'] = $result['id'];
-				$_SESSION['username'] = $result['username'];
-				$_SESSION['mail'] = $result['mail'];
-				$_SESSION['created_at'] = $result['created_at'];
-				$_SESSION['image'] = $result['picture'];
+	if($result == true){
+		$_SESSION['id'] = $result['id'];
+		$_SESSION['nom'] = $result['nom'];
+		$_SESSION['pseudo'] = $result['pseudo'];
+		$_SESSION['prenom'] = $result['prenom'];
 
-				return true;
-			}else{
-				return false;
-			}
-		}else{
-
-			return false;
-		}
+		return true;
+	}else {
+		return false;
 	}
+}
 
-	/*1.3!listMusics
-		return :
-			array of results
-		$db -> 				database object
-	*/
 
-function userRegistration(PDO $db, $pseudo, $nom, $prenom, $mail, $pass ) {
+function userRegistration(PDO $db, $nom, $prenom, $naissance, $adresse, $ville, $telephone, $mail, $pseudo, $pass ) {
 		
 		
-		if ( !empty($pseudo) AND !empty($nom) AND !empty($prenom) AND !empty($mail) AND !empty($pass) ) {
-			$sql= " INSERT INTO users (pseudo, nom, prenom, mail, pass) 
-				 VALUES (:pseudo, :nom, :prenom, :mail, :pass)";
+		if ( !empty($nom) AND !empty($prenom) AND !empty($naissance) AND !empty($adresse) AND !empty($ville) AND !empty($telephone) AND !empty($mail) AND !empty($pseudo) AND !empty($pass) ) {
+			$sql= " INSERT INTO users (nom, prenom, naissance, adresse, ville, telephone, mail, pseudo, pass) 
+				 VALUES (:nom, :prenom, :naissance, :adresse, :ville, :telephone, :mail, :pseudo, :pass)";
  
 			$req = $db->prepare($sql);
 			$req->execute( array(
-				'pseudo' => $pseudo,
 				'nom' => $nom,
 				'prenom' => $prenom,
+				'naissance' => $naissance,
+				'adresse' => $adresse,
+				'ville' => $ville,
+				'telephone' => $telephone,
 				'mail' => $mail,
+				'pseudo' => $pseudo,
 				'pass' => $pass
 
 				));

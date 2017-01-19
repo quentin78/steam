@@ -4,7 +4,8 @@ include('header.php');
 ?>
 
 
-<?php
+
+	<?php
 session_start();
 include('footer.php');
 ?>
