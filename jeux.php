@@ -62,7 +62,9 @@ include('functions/functions.fn.php');
 							</div>
 							<div class="col-md-5">
 							<button class="btn btn-danger" style="margin-bottom: 10px;">Ajouter au panier</button><br>
+							<?php echo '<a href="afficher.php?id='.$games['id'].'">';?>
 							<button class="btn btn-danger">En savoir plus</button>
+							<?php echo '</a>' ?>
 							</div>
 							<hr style="text-align: center;width: 1000px;">
 
