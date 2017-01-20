@@ -1,5 +1,4 @@
 <?php
-session_start();
 include('header.php');
 ?>
 
@@ -143,6 +142,5 @@ include('header.php');
 </div>	
 
 <?php
-session_start();
 include('footer.php');
 ?>

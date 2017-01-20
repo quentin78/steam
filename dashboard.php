@@ -1,5 +1,4 @@
 <?php
-session_start();
 include('header.php');
 ?>
 
@@ -54,7 +53,6 @@ include('header.php');
 		<ul id="control-buttons" class="control-buttons"></ul>
 	</section>
 	
-	<?php
-session_start();
+<?php
 include('footer.php');
 ?>
