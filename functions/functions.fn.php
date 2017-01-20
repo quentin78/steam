@@ -79,4 +79,27 @@ function singlegames(PDO $db, $id){
 }
 
 
+function gamesreadcat1(PDO $db, $category) {
+
+		$sql = " SELECT * FROM games WHERE category= 1 ";
+
+			$req = $db->prepare($sql);
+			$req->execute(array("category" => $category));
+			$result = $req->fetchAll(PDO::FETCH_ASSOC);
+
+		return $result;
+	}
+
+function gamesreadcat2(PDO $db, $category) {
+
+		$sql = " SELECT * FROM games WHERE category= 2 ";
+
+			$req = $db->prepare($sql);
+			$req->execute(array("category" => $category));
+			$result = $req->fetchAll(PDO::FETCH_ASSOC);
+
+		return $result;
+	}
+
+
 ?>
