@@ -1,4 +1,4 @@
-<<?php 
+<?php 
 
 session_start();
 
@@ -38,6 +38,11 @@ session_start();
 						<form action="deconnexion.php">
 							<input id="dec" type="submit" value="Déconnexion" class="btn btn-danger" style=" width: 126px; height: 50px; margin-left: 10px; margin-right: 10px;">
 						</form>
+						</li>
+												<li>
+						<button class="btn btn-info" style=" width: 126px; height: 50px; margin-left: 10px; margin-right: 10px;">
+							<i class="glyphicon glyphicon-shopping-cart"></i>
+						</button>
 						</li>
 						
 					</ul>
