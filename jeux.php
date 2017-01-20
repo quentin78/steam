@@ -51,7 +51,7 @@ include('functions/functions.fn.php');
 
 							<div class="col-md-3">
 
-								<?php echo '<img src="'.$games['photo'].'" title="" alt="" width="150">';?><br>
+								<?php echo '<img class="img2" src="'.$games['photo'].'" title="" alt="" width="150">';?><br>
 								<h5><?php echo $games['nom'];?></h5>
 
 							</div>
