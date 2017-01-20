@@ -12,7 +12,10 @@ include('functions/functions.fn.php');
 
 <?php
 	echo '<img class="img2" src="'.$result['photo'].'" title="" alt="" width="150">'.'</br>';
-	echo $result['nom']; 
+	echo $result['nom'];
+	echo $result['description'];
+	echo $result['age'];
+	echo $result['video'];   
 ?>
 
 <?php
