@@ -1088,3 +1088,28 @@ span.input-group-addon i {
   font-size: 15px;
   padding-left: 200px;
 }
+
+h5 {
+  color: white;
+}
+
+p {
+  color: white;
+  font-size: 10px;
+}
+
+.img2 {
+  box-shadow: 0px 0px 20px 0px #000000;
+  transition: all 1s;
+  -moz-transition: all 1s;
+  -webkit-transition: all 1s;
+  -o-transition: all 1s;
+}
+
+.img2:hover {
+  transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  -webkit-transform: scale(1.05);
+  -o-transform: scale(1.05);
+  -moz-transform: scale(1.05);
+}
