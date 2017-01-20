@@ -69,7 +69,9 @@ include('functions/functions.fn.php');
 
 							<div class="col-md-3">
 
+								<?php echo '<a href="afficher.php?id='.$games['id'].'">';?>
 								<?php echo '<img class="img2" src="'.$games['photo'].'" title="" alt="" width="150">';?><br>
+								<?php echo '</a>' ?>
 								<h5><?php echo $games['nom'];?></h5>
 								<p><?php echo $games['description'];?></p>
 

@@ -69,7 +69,14 @@ function gamesread(PDO $db) {
 		return $result;
 	}
 
+function singlegames(PDO $db, $id){
+	$sql = 'SELECT * FROM games WHERE id = :id';
+	$req = $db->prepare($sql);
+	$req->execute(array("id" => $id));
+	$result = $req->fetch(PDO::FETCH_ASSOC);
 
+	return $result;
+}
 
 
 ?>
