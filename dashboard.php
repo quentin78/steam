@@ -1,5 +1,7 @@
 <?php
 include('header.php');
+include('config/config.php');
+include('functions/functions.fn.php');
 ?>
 
 
@@ -52,6 +54,31 @@ include('header.php');
 		<!-- Controles de Navegacion -->
 		<ul id="control-buttons" class="control-buttons"></ul>
 	</section>
+
+
+	<div class="container">
+
+				<?php $read = gamesread($db); ?>
+
+				<?php foreach($read as $games){ ?>
+
+						<div class="rows text-center">
+
+							<div class="col-md-4">
+
+								<?php echo '<img src="'.$games['photo'].'" title="" alt="" width="150">';?><br>
+								<?php echo $games['nom'];?>
+
+							</div>
+
+						</div>
+
+				<?php
+				}
+				?>
+		
+	</div>
+	
 	
 <?php
 include('footer.php');
