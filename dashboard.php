@@ -55,7 +55,8 @@ include('functions/functions.fn.php');
 		<ul id="control-buttons" class="control-buttons"></ul>
 	</section>
 
-
+	<h1>Top 12 des jeux 2016 </h1>
+ 
 	<div class="container">
 
 				<?php $read = gamesread($db); ?>
