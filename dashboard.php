@@ -59,25 +59,28 @@ include('functions/functions.fn.php');
  
 	<div class="container">
 
+			<div class="rows text-center">
+
 				<?php $read = gamesread($db); ?>
 
 				<?php foreach($read as $games){ ?>
 
-						<div class="rows text-center">
+						
 
-							<div class="col-md-4">
+							<div class="col-md-3">
 
 								<?php echo '<img src="'.$games['photo'].'" title="" alt="" width="150">';?><br>
-								<?php echo $games['nom'];?>
+								<h5><?php echo $games['nom'];?></h5>
 
 							</div>
 
-						</div>
+						
 
 				<?php
 				}
 				?>
-		
+
+			</div>
 	</div>
 	
 	
